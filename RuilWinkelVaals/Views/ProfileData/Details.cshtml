@@ -1,0 +1,114 @@
+﻿@model RuilWinkelVaals.Models.ProfileData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProfileData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountType_LT.AccountType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountType_LT.AccountType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ledenpas_LT.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ledenpas_LT.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voornaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voornaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Achternaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Achternaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Straat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Straat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Huisnummer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Huisnummer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Woonplaats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Woonplaats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Geboortedatum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Geboortedatum)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
