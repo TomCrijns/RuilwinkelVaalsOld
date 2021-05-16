@@ -1,0 +1,28 @@
+﻿@model RuilWinkelVaals.ViewModel.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="Logincontainer">
+    <div class="pt-5">
+        <div class="Loginbox">
+            <div class="form-container">
+                <img class="Logo" alt="RuilWinkel Vaals logo" src="~/Images/LoginBackgroundImage.png" />
+                @using (Html.BeginForm())
+                {
+                    @Html.Label("Email", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.emailAddress, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(user => user.emailAddress, "", new { @class = "Validation" })
+                    @Html.Label("Wachtwoord", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.password, null, new { @class = "Textbox", @type = "password" })
+                    @Html.ValidationMessageFor(user => user.password, "", new { @class = "Validation" })
+                    @Html.ValidationMessage("LoginError", null, new { @class = "Validation" })
+                    <input class="Button" type="submit" value="Inloggen" onclick="location.href='@Url.Action("Login")'" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
