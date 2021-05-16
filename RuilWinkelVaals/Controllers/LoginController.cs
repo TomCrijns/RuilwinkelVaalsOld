@@ -37,6 +37,7 @@ namespace RuilWinkelVaals.Controllers
                 }
                 if (authenticated)
                 {
+                    //Create user session
                     var user = new User()
                     {
                         Id = profileData.Id,
