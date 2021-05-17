@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace RuilWinkelVaals.ViewModel
     public class User
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "Er is geen e-mailadres ingevuld")]
         public string Email { get; set; }
 
         public string Voornaam { get; set; }

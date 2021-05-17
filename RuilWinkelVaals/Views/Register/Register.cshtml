@@ -1,0 +1,71 @@
+﻿@model RuilWinkelVaals.ViewModel.Register
+ 
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_RegisterLayout.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $('.date-picker').datepicker();
+    });
+</script>
+
+<div class="RegisterContainer">
+    <div class="pt-5">
+        <div class="RegisterBox">
+            <div class="form-container">
+                <img class="Logo" alt="RuilWinkel Vaals logo" src="~/Images/LoginBackgroundImage.png" />
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    //Personal Info
+                    @Html.Label("Email", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Email, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    @Html.Label("Voornaam", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Voornaam, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Voornaam, "", new { @class = "text-danger" })
+                    @Html.Label("Achternaam", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Achternaam, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Achternaam, "", new { @class = "text-danger" })
+
+                    //Location
+                    @Html.Label("Straat", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Straat, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Straat, "", new { @class = "text-danger" })
+                    @Html.Label("Huisnummer", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Huisnummer, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Huisnummer, "", new { @class = "text-danger" })
+                    @Html.Label("Woonplaats", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Woonplaats, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Woonplaats, "", new { @class = "text-danger" })
+                    @Html.Label("Postcode", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Postcode, null, new { @class = "Textbox" })
+                    @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+
+                    //Date of Birth
+                    @Html.Label("Geboortedatum", new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Geboortedatum, "", new { @class = "date-picker" })
+                    @Html.ValidationMessageFor(user => user.Geboortedatum, "", new { @class = "text-danger" })
+
+                    //Password
+                    @Html.Label("Wachtwoord", null, new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.Password, null, new { @class = "Textbox", @type = "password" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                    @Html.Label("Wachtwoord Verificatie", null, new { @class = "Label" })
+                    @Html.TextBoxFor(model => model.ValidationPassword, null, new { @class = "Textbox", @type = "password" })
+                    @Html.ValidationMessageFor(model => model.ValidationPassword, "", new { @class = "text-danger" })
+
+                    //Business
+                    @Html.Label("Zakelijk?", null, new { @class = "Label" })
+                    @Html.CheckBoxFor(model => model.Zakelijk)
+
+                    <input class="Button" type="submit" value="Registreren" onclick="location.href='@Url.Action("Register")'" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
