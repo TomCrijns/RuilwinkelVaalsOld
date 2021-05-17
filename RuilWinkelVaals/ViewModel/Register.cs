@@ -19,11 +19,11 @@ namespace RuilWinkelVaals.ViewModel
 
         public string Achternaam { get; set; }
 
-        public int? Balans { get; set; }
+        public int Balans { get; set; }
 
-        public int? AccountType { get; set; }
+        public int AccountType { get; set; }
 
-        public int? Ledenpas { get; set; }
+        public int Ledenpas { get; set; }
 
         public string Straat { get; set; }
 
@@ -33,9 +33,9 @@ namespace RuilWinkelVaals.ViewModel
 
         public string Postcode { get; set; }
 
-        public DateTime? DateCreated { get; set; }
+        public DateTime DateCreated { get; set; }
 
-        public DateTime? Geboortedatum { get; set; }
+        public DateTime Geboortedatum { get; set; }
         public bool Zakelijk { get; set; }
     }
 }

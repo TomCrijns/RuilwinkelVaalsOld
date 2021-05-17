@@ -20,6 +20,8 @@
                 {
                     @Html.AntiForgeryToken()
 
+                    @Html.ValidationMessage("ValidationError", "", new { @class = "Validation" })
+
                     //Personal Info
                     @Html.Label("Email", new { @class = "Label" })
                     @Html.TextBoxFor(model => model.Email, null, new { @class = "Textbox" })
@@ -47,7 +49,7 @@
 
                     //Date of Birth
                     @Html.Label("Geboortedatum", new { @class = "Label" })
-                    @Html.TextBoxFor(model => model.Geboortedatum, "", new { @class = "date-picker" })
+                    @Html.TextBoxFor(model => model.Geboortedatum, "", new { @class = "Textbox" })
                     @Html.ValidationMessageFor(user => user.Geboortedatum, "", new { @class = "text-danger" })
 
                     //Password
