@@ -34,7 +34,7 @@ namespace RuilWinkelVaals.ViewModel
         public string Postcode { get; set; }
 
         public DateTime DateCreated { get; set; }
-
+        [Required(ErrorMessage = "Er is geen geboortedatum ingevuld")]
         public DateTime Geboortedatum { get; set; }
         public bool Zakelijk { get; set; }
     }

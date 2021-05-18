@@ -6,8 +6,15 @@
 }
 
 <script type="text/javascript">
-    $(function () {
-        $('.date-picker').datepicker();
+    $(document).ready(function() {
+        $('#date-picker').datetimepicker({
+            showTodayButton: true,
+            format: 'dd-mm-yyyy',
+            showClose: true,
+            showClear: true,
+            toolbarPlacement: 'top',
+            stepping: 15
+        });
     });
 </script>
 
@@ -23,43 +30,56 @@
                     @Html.ValidationMessage("ValidationError", "", new { @class = "Validation" })
 
                     //Personal Info
-                    @Html.Label("Email", new { @class = "Label" })
-                    @Html.TextBoxFor(model => model.Email, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                    @Html.Label("Email *", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "Validation" })
+                    @Html.TextBoxFor(model => model.Email, null, new { @class = "Textbox"})
+
+
                     @Html.Label("Voornaam", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Voornaam, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Voornaam, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Voornaam, "", new { @class = "text-danger" })
+
                     @Html.Label("Achternaam", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Achternaam, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Achternaam, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Achternaam, "", new { @class = "text-danger" })
+
 
                     //Location
                     @Html.Label("Straat", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Straat, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Straat, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Straat, "", new { @class = "text-danger" })
+
                     @Html.Label("Huisnummer", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Huisnummer, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Huisnummer, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Huisnummer, "", new { @class = "text-danger" })
+
                     @Html.Label("Woonplaats", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Woonplaats, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Woonplaats, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Woonplaats, "", new { @class = "text-danger" })
+
                     @Html.Label("Postcode", new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Postcode, null, new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+
 
                     //Date of Birth
-                    @Html.Label("Geboortedatum", new { @class = "Label" })
-                    @Html.TextBoxFor(model => model.Geboortedatum, "", new { @class = "Textbox" })
-                    @Html.ValidationMessageFor(user => user.Geboortedatum, "", new { @class = "text-danger" })
+                    @Html.Label("Geboortedatum *", new { @class = "Label" })
+                    @Html.ValidationMessageFor(user => user.Geboortedatum, "", new { @class = "Validation" })
+                    @Html.TextBoxFor(model => model.Geboortedatum, "", new { @class = "date-picker, Textbox" })
+
+
 
                     //Password
-                    @Html.Label("Wachtwoord", null, new { @class = "Label" })
+                    @Html.Label("Wachtwoord *", null, new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.Password, null, new { @class = "Textbox", @type = "password" })
-                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
 
-                    @Html.Label("Wachtwoord Verificatie", null, new { @class = "Label" })
+
+                    @Html.Label("Wachtwoord Verificatie *", null, new { @class = "Label" })
+                    @Html.ValidationMessageFor(model => model.ValidationPassword, "", new { @class = "Validation" })
                     @Html.TextBoxFor(model => model.ValidationPassword, null, new { @class = "Textbox", @type = "password" })
-                    @Html.ValidationMessageFor(model => model.ValidationPassword, "", new { @class = "text-danger" })
+
 
                     //Business
                     @Html.Label("Zakelijk?", null, new { @class = "Label" })
