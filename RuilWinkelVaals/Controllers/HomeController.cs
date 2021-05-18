@@ -12,7 +12,7 @@ namespace RuilWinkelVaals.Controllers
         {
             return View();
         }
-
+        //Get About
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
