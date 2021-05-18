@@ -41,7 +41,7 @@ namespace RuilWinkelVaals.Controllers
                                 Huisnummer = model.Huisnummer,
                                 Woonplaats = model.Woonplaats,
                                 Postcode = model.Postcode,
-                                Geboortedatum = model.Geboortedatum,
+                                Geboortedatum = Convert.ToDateTime(model.Geboortedatum).Date,
                                 DateCreated = DateTime.Today.Date,
                             };
 

@@ -10,8 +10,10 @@ namespace RuilWinkelVaals.ViewModel
     {
         [Required(ErrorMessage = "Er is geen e-mailadres ingevuld")]
         public string Email { get; set; }
+
         [Required(ErrorMessage = "Er is geen wachtwoord ingevuld")]
         public string Password { get; set; }
+
         [Required(ErrorMessage = "Er is geen wachtwoord ingevuld")]
         public string ValidationPassword { get; set; }
 
@@ -34,8 +36,9 @@ namespace RuilWinkelVaals.ViewModel
         public string Postcode { get; set; }
 
         public DateTime DateCreated { get; set; }
+
         [Required(ErrorMessage = "Er is geen geboortedatum ingevuld")]
-        public DateTime Geboortedatum { get; set; }
+        public DateTime? Geboortedatum { get; set; }
         public bool Zakelijk { get; set; }
     }
 }
