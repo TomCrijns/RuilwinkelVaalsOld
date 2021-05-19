@@ -7,11 +7,12 @@
     width: 200px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: -5px;
     left: 0;
-    background-color: #401c4c;
+    background-color: #f2f2f2;
     overflow-x: hidden;
     padding-top: 16px;
+    box-shadow: 5px 5px 5px grey;
 }
 
     /* Style sidebar links */
@@ -19,8 +20,9 @@
         padding: 6px 8px 6px 16px;
         text-decoration: none;
         font-size: 20px;
-        color: #ffffff;
+        color: #401c4c;
         display: block;
+        font-family: Arial;
     }
 
         /* Style links on mouse-over */
@@ -49,5 +51,6 @@
     height: 15%;
     width: 80%;
     margin-left: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
